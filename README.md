@@ -154,7 +154,7 @@ MIT License © 2025 Subrata Das
 For questions, reach out at:
 
 - **Email**: subratadasgit786@gmail.com
-- **LinkedIn**: [linkedin.com/in/subratadas786](https://linkedin.com/in/subratadas786)
+- **LinkedIn**: [linkedin.com/in/subratadas786](https://linkedin.com/in/subrata-das-mca)
 
 ---
 
