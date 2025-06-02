@@ -1,36 +1,161 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🏠 Rentify
 
-## Getting Started
+Rentify is a hybrid Web2-Web3 real estate platform that allows users to buy and sell properties through a familiar Web2 interface, while leveraging the power and transparency of blockchain to finalize transactions via smart contracts. It brings trust, security, and decentralization to real estate.
 
-First, run the development server:
+---
+
+## 🚀 Features
+
+- 🌐 **Hybrid Web2 + Web3** architecture
+- 🔐 **User authentication** using Clerk
+- 🏘️ **List, edit, and delete** properties with image uploads (via Supabase)
+- 📦 **Secure payments** via Razorpay
+- 🧾 **Invoice generation** with real-time status tracking
+- 🪙 **NFT Minting** for property ownership certificates
+- ⚖️ **Smart contract integration** for trustless transactions
+- 📄 **Detailed property information** with live previews
+
+---
+
+## 🛠 Tech Stack
+
+| Layer          | Technology                                                                 |
+|----------------|-----------------------------------------------------------------------------|
+| **Frontend**   | Next.js, React, Tailwind CSS, Formik                                        |
+| **Backend**    | Node.js (API routes), Supabase (DB & storage), Clerk (Auth)                 |
+| **Blockchain** | Solidity, Foundry, Ethers.js, **Sepolia Testnet**                           |
+| **Payments**   | Razorpay API, Invoice PDF generation                                        |
+| **Web3 Storage**| IPFS via Pinata                                                             |
+
+---
+
+## 📸 Screenshots
+
+> Add screenshots here (list page, edit form, NFT mint screen, etc.)
+
+---
+
+## 🧪 Local Development
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/yourusername/rentify.git
+cd rentify
+```
+
+### 2. Install dependencies
+
+```bash
+pnpm install
+```
+
+### 3. Configure environment variables
+
+Create a `.env.local` file and add:
+
+```env
+# 🌐 Supabase Configuration
+NEXT_PUBLIC_SUPABASE_URL=https://your-supabase-url.supabase.co
+NEXT_PUBLIC_SUPABASE_API_KEY=your-supabase-anon-key
+NEXT_PUBLIC_IMAAGE_PUBLIC_URL=https://your-supabase-url.supabase.co/storage/v1/object/public/listingimages/
+
+# 🔐 Clerk Authentication
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your-clerk-publishable-key
+CLERK_SECRET_KEY=your-clerk-secret-key
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+NEXT_PUBLIC_CLERK_SIGN_UP_FALLBACK_REDIRECT_URL=/
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_IN_FALLBACK_REDIRECT_URL=/
+
+# 📍 Google Places API
+NEXT_PUBLIC_GOOGLE_PLACE_API_KEY=your-google-places-api-key
+GOOGLE_API_KEY=your-google-api-key
+
+# 💳 Razorpay Payment Gateway
+RAZORPAY_KEY_ID=your-razorpay-key-id
+RAZORPAY_SECRET=your-razorpay-secret
+
+# 🔗 Blockchain (Sepolia)
+NEXT_PUBLIC_SEPOLIA_RPC=https://sepolia.infura.io/v3/your-infura-project-id
+
+# 📦 IPFS via Pinata
+PINATA_API_KEY=your-pinata-api-key
+PINATA_SECRET_API_KEY=your-pinata-secret-api-key
+
+### 4. Run the app
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## ⚙️ Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+You can deploy Rentify easily on platforms like:
 
-## Learn More
+- [Vercel](https://vercel.com/)
+- [Netlify](https://netlify.com/)
 
-To learn more about Next.js, take a look at the following resources:
+Don’t forget to configure your environment variables on the dashboard.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🔐 Smart Contracts
 
-## Deploy on Vercel
+The Solidity contract `PropertyOwnership.sol` manages:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Minting of NFTs for property ownership
+- Verifying ownership and transfers
+- Linking property metadata with IPFS
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Use Foundry or Hardhat for local testing and deployment. Deployed on **Sepolia Testnet**.
+
+---
+
+## ✨ Coming Soon
+
+- AI-powered property recommendations
+- Full transaction history & analytics
+- On-chain dispute resolution
+- Dynamic pricing models
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! To get started:
+
+```bash
+git checkout -b feature/your-feature
+```
+
+Submit a pull request once ready 🚀
+
+---
+
+## 👥 Contributors
+
+- **Subrata Das** – [subratadasgit786@gmail.com](mailto:subratadasgit786@gmail.com)
+- **Suvra Bhattacharjee**
+- **Udar Das**
+
+---
+
+## 📄 License
+
+MIT License © 2025 Subrata Das
+
+---
+
+## 📬 Contact
+
+For questions, reach out at:
+
+- **Email**: subratadasgit786@gmail.com
+- **LinkedIn**: [linkedin.com/in/subratadas786](https://linkedin.com/in/subratadas786)
+
+---
+
+> Built with 💙 by Subrata Das and contributors.
