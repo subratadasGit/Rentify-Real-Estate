@@ -40,14 +40,14 @@ Rentify is a hybrid Web2-Web3 real estate platform that allows users to buy and 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/rentify.git
-cd rentify
+git clone https://github.com/yourusername/rentify.git](https://github.com/subratadasGit/Rentify-Real-Estate
+cd Rentify-Real-Estate
 ```
 
 ### 2. Install dependencies
 
 ```bash
-pnpm install
+npm install
 ```
 
 ### 3. Configure environment variables
