@@ -6,6 +6,7 @@ import { Plus } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { UserButton, useUser } from "@clerk/nextjs";
+import { ModeToggle } from "@/components/ui/theme-toggler";
 
 export const Header = () => {
   const path = usePathname();
@@ -16,7 +17,7 @@ export const Header = () => {
   }, [path]);
 
   return (
-    <header className="sticky top-0 w-full z-40 bg-white border-b-2 border-b-cyan-200/60 shadow-lg">
+    <header className="top-0 w-full z-40 dark:text-purple-400 shadow-lg">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-5 md:px-16">
         {/* Logo/Brand */}
         <Link href="/" className="flex items-center gap-3 group">
@@ -24,36 +25,33 @@ export const Header = () => {
         </Link>
 
         {/* Navigation */}
-        <ul className="hidden md:flex gap-10 text-cyan-900 font-semibold text-xl items-center">
+        <ul className="hidden md:flex gap-10 text-purple-400 font-semibold text-xl items-center">
           <Link href="/">
             <li
-              className={`px-2 py-1 rounded-lg hover:bg-cyan-100 hover:text-blue-700 transition cursor-pointer ${
-                path === "/" ? "text-blue-700 bg-cyan-100" : ""
-              }`}
+              className={`px-2 py-1 rounded-lg hover:bg-purple-200 hover:text-purple-700 transition cursor-pointer ${path === "/" ? "text-purple-700 bg-purple-100" : ""
+                }`}
             >
               Home
             </li>
           </Link>
           <Link href="/add-new-listing">
             <li
-              className={`px-2 py-1 rounded-lg hover:bg-cyan-100 hover:text-blue-700 transition cursor-pointer ${
-                path === "/add-new-listing" ? "text-blue-700 bg-cyan-100" : ""
-              }`}
+              className={`px-2 py-1 rounded-lg hover:bg-purple-200 hover:text-purple-700 transition cursor-pointer ${path === "/add-new-listing" ? "text-purple-700 bg-purple-100" : ""
+                }`}
             >
               List Property
             </li>
           </Link>
           <Link href="/my-listings">
             <li
-              className={`px-2 py-1 rounded-lg hover:bg-cyan-100 hover:text-blue-700 transition cursor-pointer ${
-                path === "/my-listings" ? "text-blue-700 bg-cyan-100" : ""
-              }`}
+              className={`px-2 py-1 rounded-lg hover:bg-purple-200 hover:text-purple-700 transition cursor-pointer ${path === "/my-listings" ? "text-purple-700 bg-purple-100" : ""
+                }`}
             >
               My Listing
             </li>
           </Link>
           <Link href="#">
-            <li className="px-2 py-1 rounded-lg hover:bg-cyan-100 hover:text-blue-700 transition cursor-pointer">
+            <li className="px-2 py-1 rounded-lg hover:bg-purple-200 hover:text-purple-700 transition cursor-pointer">
               Agent Finder
             </li>
           </Link>
@@ -62,7 +60,7 @@ export const Header = () => {
         {/* Actions */}
         <div className="flex gap-4 items-center">
           <Link href={'/add-new-listing'}>
-            <Button className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-4 py-2 rounded-lg shadow hover:from-blue-700 hover:to-cyan-600 transition-all">
+            <Button className="flex items-center gap-2 bg-gradient-to-r from-fuchsia-600 via-purple-700 to-violet-900 text-white px-5 py-2.5 rounded-xl shadow-lg hover:from-fuchsia-700 hover:via-purple-800 hover:to-violet-950 transition-all duration-300">
               <Plus size={16} /> Post Your Ad
             </Button>
           </Link>
@@ -72,12 +70,13 @@ export const Header = () => {
             <Link href={'/sign-in'}>
               <Button
                 variant="outline"
-                className="px-4 py-2 border-cyan-300 hover:border-blue-400 text-cyan-900 hover:text-blue-700 transition"
+                className="px-4 py-2 border-purple-400 hover:border-purple-500 text-purple-400 hover:text-purple-600 transition"
               >
                 Log In
               </Button>
             </Link>
           )}
+          <ModeToggle />
         </div>
       </div>
     </header>

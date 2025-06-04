@@ -65,7 +65,7 @@ export default function Rentify() {
   }, [messages]);
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col">
       <LandingSections />
       <AnimatePresence>
         {showChatIcon && (

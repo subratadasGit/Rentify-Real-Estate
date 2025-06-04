@@ -19,7 +19,7 @@ const Provider = ({ children }) => {
         googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_PLACE_API_KEY}
         libraries={['places']}>
         <Header />
-        <div className="mt-26">{children}</div>
+        <div className="mt-0">{children}</div>
       </LoadScript>
     
   );
