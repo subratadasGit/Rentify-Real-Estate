@@ -13,7 +13,7 @@ import {
   MessageCircle,
   Send,
   Loader2,
-  ArrowDownCircleIcon,
+  MessageCircleMore,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useChat } from "@ai-sdk/react";
@@ -80,12 +80,12 @@ export default function Rentify() {
               ref={chatIconRef}
               onClick={toggleChat}
               size="icon"
-              className="rounded-full size-14 p-2 shadow-lg"
+              className="rounded-full size-14 p-2 shadow-lg bg-purple-200 text-purple-800"
             >
               {!isChatOpen ? (
                 <MessageCircle className="size-12" />
               ) : (
-                <ArrowDownCircleIcon />
+                <MessageCircleMore className="size-12" />
               )}
             </Button>
           </motion.div>
@@ -100,16 +100,16 @@ export default function Rentify() {
             transition={{ duration: 0.2 }}
             className="fixed bottom-4 right-4 z-50 w-[95%] md:w-[500px]"
           >
-            <Card className="w-96 border-2 rounded-md shadow-lg">
+            <Card className="w-96 border-2 rounded-md shadow-lg bg-purple-50 border-purple-500">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-3">
-                <CardTitle className="text-lg font-bold">Rene</CardTitle>
+                <CardTitle className="text-lg font-bold text-purple-800">Rene</CardTitle>
                 <Button
                   onClick={toggleChat}
                   size="icon"
                   variant="ghost"
                   className="px-2 py-0"
                 >
-                  <X className="size-12" />
+                  <X className="size-12 text-purple-800" />
                   <span className="sr-only">Close Chat</span>
                 </Button>
               </CardHeader>
@@ -128,8 +128,8 @@ export default function Rentify() {
                         <div
                           className={`p-2 rounded-lg ${
                             message.role === "user"
-                              ? "bg-blue-500 text-white my-1"
-                              : "bg-gray-200 text-gray-800 my-1"
+                              ? "bg-purple-600 text-white my-1"
+                              : "bg-purple-100 text-purple-800 my-1"
                           }`}
                         >
                           <ReactMarkdown
@@ -176,12 +176,12 @@ export default function Rentify() {
                       </div>
                     ))
                   ) : (
-                    <div className="w-full mt-32 text-gray-600 items-center justify-center flex gap-3">
+                    <div className="w-full mt-32 text-purple-400 items-center justify-center flex gap-3">
                       No messages yet.
                     </div>
                   )}
                   {isLoading && (
-                    <div className="w-full mt-32 text-gray-600 items-center justify-center flex gap-3">
+                    <div className="w-full mt-32 text-purple-600 items-center justify-center flex gap-3">
                       <Loader2 className="size-8 animate-spin" />
                       <Button onClick={() => stop()} className="underline">
                         Stop
@@ -189,7 +189,7 @@ export default function Rentify() {
                     </div>
                   )}
                   {error && (
-                    <div className="w-full mt-32 text-gray-600 items-center justify-center flex gap-3">
+                    <div className="w-full mt-32 text-purple-600 items-center justify-center flex gap-3">
                       <Button onClick={() => reload()} className="underline">
                         Reload
                       </Button>
@@ -204,7 +204,7 @@ export default function Rentify() {
                   >
                     <Input
                       value={input}
-                      className="flex-1"
+                      className="flex-1 border-purple-500 text-purple-800"
                       placeholder="Type a message..."
                       onChange={handleInputChange}
                     />
@@ -214,7 +214,7 @@ export default function Rentify() {
                       className="size-9"
                       disabled={isLoading}
                     >
-                      <Send className="size-4" />
+                      <Send className="size-4 text-purple-800" />
                     </Button>
                   </form>
                 </CardFooter>

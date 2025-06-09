@@ -31,19 +31,21 @@ const StyledWrapper = styled.div`
   }
 
   .glow-card::before,
-  .glow-card::after {
-    --size: 5px;
-    content: "";
-    position: absolute;
-    top: calc(var(--size) / -2);
-    left: calc(var(--size) / -2);
-    width: calc(100% + var(--size));
-    height: calc(100% + var(--size));
-    background: radial-gradient(circle at 0 0, hsl(27deg 93% 60%), transparent),
-      radial-gradient(circle at 100% 0, #00a6ff, transparent),
-      radial-gradient(circle at 0 100%, #ff0056, transparent),
-      radial-gradient(circle at 100% 100%, #6500ff, transparent);
-  }
+.glow-card::after {
+  --size: 5px;
+  content: "";
+  position: absolute;
+  top: calc(var(--size) / -2);
+  left: calc(var(--size) / -2);
+  width: calc(100% + var(--size));
+  height: calc(100% + var(--size));
+  background: radial-gradient(circle at 0 0, #c084fc, transparent),
+    radial-gradient(circle at 100% 0, #f0abfc, transparent),
+    radial-gradient(circle at 0 100%, #a78bfa, transparent),
+    radial-gradient(circle at 100% 100%, #9333ea, transparent);
+}
+
+
 
   .glow-card::after {
     --size: 2px;

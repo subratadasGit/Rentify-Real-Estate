@@ -6,13 +6,13 @@ import GooglePlacesAutocomplete, { geocodeByAddress, getLatLng } from "react-goo
 const GooglePlaceAddressSearch = ({ selectedAddress, setCoordinates }) => {
   return (
     <div className="flex items-center w-full">
-      <MapPin className="h-10 p-2 w-10 text-primary bg-purple-200 rounded-l-lg" />
+      <MapPin className="h-10 p-2 w-10 text-purple-700 bg-purple-200 rounded-l-sm" />
       <GooglePlacesAutocomplete
         apiKey={process.env.NEXT_PUBLIC_GOOGLE_PLACE_API_KEY}
         selectProps={{
           placeholder: "Search Property Address",
           isClearable: true,
-          className: "w-full",
+          className: "w-full bg-purple-50",
           onChange: (place) => {
             console.log(place);
             selectedAddress(place);

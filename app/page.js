@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { Home, ShieldCheck, Sparkles, Globe, ArrowRight, Users, Facebook, Twitter, Instagram } from "lucide-react";
 import ExplorePropertyCard from "@/components/ui/ExplorePropertyCard";
+import GradientText from "@/react-bits/GradientText/GradientText";
+import {Avatar, AvatarGroup} from "@heroui/react";
 
 export default function LandingPage() {
   return (
@@ -9,24 +11,25 @@ export default function LandingPage() {
       {/* Explore Properties Map Section (Top) */}
       <section className="pt-10 pb-6 px-2 mt-26 md:px-0">
         <div className="max-w-6xl mx-auto mb-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-purple-400 mb-17 text-center drop-shadow">Explore Properties</h2>
+          {/* <h2 className="text-3xl md:text-4xl font-bold text-purple-400 mb-17 text-center drop-shadow">Explore Properties</h2> */}
+          <GradientText className="text-center text-5xl font-bold mb-17">Explore Properties</GradientText>
           <ExplorePropertyCard />
         </div>
       </section>
 
       {/* Hero Section */}
       <section className="relative flex flex-col items-center justify-center text-center py-16 md:py-24 px-4 md:px-0">
-        <Image
+        {/* <Image
           src="/hero-realestate.jpg"
           alt="Rentify Hero"
           fill
           className="object-cover object-center absolute inset-0 w-full h-full opacity-30 -z-10"
           priority
-        />
-        <h1 className="text-5xl md:text-6xl font-extrabold text-purple-200 mb-4 drop-shadow-lg tracking-tight">
+        /> */}
+        <h1 className="text-5xl md:text-6xl font-extrabold text-purple-300 mb-4 drop-shadow-lg tracking-tight">
           Welcome to <span className="text-purple-600">Rentify</span>
         </h1>
-        <p className="text-xl md:text-2xl text-purple-200 mb-8 max-w-2xl mx-auto drop-shadow">
+        <p className="text-xl md:text-2xl text-purple-400 mb-8 max-w-2xl mx-auto drop-shadow">
           The next generation Property marketplace. List, verify, and mint your property as a blockchain NFT.
         </p>
         <Button
@@ -38,57 +41,57 @@ export default function LandingPage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-black">
+      <section className="py-16">
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
           <div className="flex flex-col items-center">
             <Home className="h-12 w-12 text-blue-600 mb-4" />
-            <h3 className="font-bold text-lg mb-2 text-purple-300">Easy Listing</h3>
-            <p className="text-purple-200">List your property in minutes with our intuitive interface.</p>
+            <h3 className="font-bold text-lg mb-2 text-purple-500">Easy Listing</h3>
+            <p className="text-purple-400">List your property in minutes with our intuitive interface.</p>
           </div>
           <div className="flex flex-col items-center">
             <ShieldCheck className="h-12 w-12 text-green-600 mb-4" />
-            <h3 className="font-bold text-lg mb-2 text-purple-300">Verified Ownership</h3>
-            <p className="text-purple-200">All listings are verified and secured on the blockchain.</p>
+            <h3 className="font-bold text-lg mb-2 text-purple-500">Verified Ownership</h3>
+            <p className="text-purple-400">All listings are verified and secured on the blockchain.</p>
           </div>
           <div className="flex flex-col items-center">
             <Sparkles className="h-12 w-12 text-yellow-500 mb-4" />
-            <h3 className="font-bold text-lg mb-2 text-purple-300">NFT Minting</h3>
-            <p className="text-purple-200">Mint your property as a unique NFT and transfer ownership seamlessly.</p>
+            <h3 className="font-bold text-lg mb-2 text-purple-500">NFT Minting</h3>
+            <p className="text-purple-400">Mint your property as a unique NFT and transfer ownership seamlessly.</p>
           </div>
           <div className="flex flex-col items-center">
             <Users className="h-12 w-12 text-cyan-600 mb-4" />
-            <h3 className="font-bold text-lg mb-2 text-purple-300">Agent Finder</h3>
-            <p className="text-purple-200">Connect with trusted agents to help you rent or manage your property.</p>
+            <h3 className="font-bold text-lg mb-2 text-purple-500">Agent Finder</h3>
+            <p className="text-purple-400">Connect with trusted agents to help you rent or manage your property.</p>
           </div>
         </div>
       </section>
 
       {/* How It Works Section */}
-      <section className="py-16 bg-gray-900">
+      <section className="py-16">
         <div className="max-w-4xl mx-auto text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-purple-400 mb-4">How Rentify Works</h2>
-          <p className="text-lg text-purple-300">A simple, secure process for property owners and renters.</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-purple-500 mb-4">How Rentify Works</h2>
+          <p className="text-lg text-purple-400">A simple, secure process for property owners and renters.</p>
         </div>
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
           <div className="flex flex-col items-center">
             <Globe className="h-10 w-10 text-blue-500 mb-2" />
-            <span className="font-semibold text-purple-100">1. List Property</span>
-            <p className="text-purple-200 text-sm">Create your listing and add property details.</p>
+            <span className="font-semibold text-purple-500">1. List Property</span>
+            <p className="text-purple-400 text-sm">Create your listing and add property details.</p>
           </div>
           <div className="flex flex-col items-center">
             <ShieldCheck className="h-10 w-10 text-green-500 mb-2" />
-            <span className="font-semibold text-purple-100">2. Verify</span>
-            <p className="text-purple-200 text-sm">We verify your ownership and property details.</p>
+            <span className="font-semibold text-purple-500">2. Verify</span>
+            <p className="text-purple-400 text-sm">We verify your ownership and property details.</p>
           </div>
           <div className="flex flex-col items-center">
             <Sparkles className="h-10 w-10 text-yellow-400 mb-2" />
-            <span className="font-semibold text-purple-100">3. Mint NFT</span>
-            <p className="text-purple-200 text-sm">Mint your property as a blockchain NFT.</p>
+            <span className="font-semibold text-purple-500">3. Mint NFT</span>
+            <p className="text-purple-400 text-sm">Mint your property as a blockchain NFT.</p>
           </div>
           <div className="flex flex-col items-center">
             <ArrowRight className="h-10 w-10 text-blue-700 mb-2" />
-            <span className="font-semibold text-purple-100">4. Rent or Transfer</span>
-            <p className="text-purple-200 text-sm">Easily rent or transfer ownership to anyone, anywhere.</p>
+            <span className="font-semibold text-purple-500">4. Rent or Transfer</span>
+            <p className="text-purple-400 text-sm">Easily rent or transfer ownership to anyone, anywhere.</p>
           </div>
         </div>
       </section>
@@ -121,6 +124,16 @@ export default function LandingPage() {
             <span className="text-purple-100">support@rentify.com</span>
             <span className="text-purple-100">123 Rentify Ave, Blockchain City</span>
           </div>
+          <div className="flex flex-col items-center md:items-start gap-2 text-center md:text-left">
+            <span className="font-semibold mb-2">Our Team</span>
+            <AvatarGroup isBordered>
+              <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026024d" />
+              <Avatar src="https://i.pravatar.cc/150?u=a04258a2462d826712d" />
+              <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704d" />
+              <Avatar src="https://i.pravatar.cc/150?u=a04258114e29026302d" />
+            </AvatarGroup>
+          </div>
+
         </div>
         <div className="text-center text-purple-100 py-4 border-t border-purple-400/30 text-sm">
           &copy; {new Date().getFullYear()} Rentify. All rights reserved.

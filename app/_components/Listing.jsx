@@ -16,14 +16,14 @@ function Listing({ listing, handleSearchClick, setBathCount, setBedCount, setHom
 
   return (
     <div>
-      <div className="p-3 flex gap-5">
+      <div className="p-3 flex gap-3">
         <GooglePlaceAddressSearch  
           selectedAddress={(v)=>{searchAddress(v)
             setAddress(v)    
           }}
           setCoordinates={setCoordinates}/>
         <div>
-          <Button className="flex gap-2"
+          <Button className="flex gap-2 bg-purple-300 text-purple-900"
             onClick={handleSearchClick}
           ><Search className="h-4 w-4" /> Search</Button>
         </div>
