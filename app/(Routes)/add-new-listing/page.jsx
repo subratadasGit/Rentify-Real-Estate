@@ -8,6 +8,7 @@ import { toast } from "sonner"
 import { useRouter } from "next/navigation";
 import { Loader } from "lucide-react";
 import { Input } from "@/components/ui/input";
+import GradientText from "@/react-bits/GradientText/GradientText";
 
 function AddNewListing() {
   const [selectedAddress, setSelectedAddress] = useState();
@@ -68,8 +69,8 @@ function AddNewListing() {
   return (
     <div className="mt-10">
       <div className="flex flex-col items-center justify-center gap-2">
-        <h1 className="text-violet-700 font-bold">Add New Listing</h1>
-        <div className="p-10 rounded-lg border shadow-md flex flex-col gap-2">
+        <GradientText className="text-center text-5xl font-bold mb-17">Add New Listing</GradientText>
+        <div className="p-10 rounded-lg border-2 shadow-md flex flex-col gap-2">
           <h2 className="text-gray-400 flex items-center">
             Enter your Aadhaar Card no
           </h2>
@@ -97,6 +98,8 @@ function AddNewListing() {
             setCoordinates={(value) => setCoordinates(value)}
           />
           <Button
+            size="lg"
+            className="text-lg px-8 py-4 bg-purple-500 text-white rounded-full shadow-lg hover:bg-purple-700 mt-3"
             disabled={!selectedAddress || !coordinates || loader}
             onClick={nextHandler}
           > {loader ? <Loader className=""/>:"Next"}

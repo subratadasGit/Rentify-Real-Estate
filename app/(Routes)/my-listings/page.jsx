@@ -3,6 +3,7 @@ import { useUser } from "@clerk/nextjs";
 import { useEffect, useState } from "react";
 import { supabase } from "@/utils/supabase/client";
 import Listing from "@/app/_components/Listing";
+import GradientText from "@/react-bits/GradientText/GradientText";
 
 export default function MyListingPage() {
   const { user, isSignedIn } = useUser();
@@ -26,17 +27,17 @@ export default function MyListingPage() {
   }, [user]);
 
   if (!isSignedIn) {
-    return <div className="text-center py-10 text-lg text-gray-600">Please sign in to view your listings.</div>;
+    return <div className="text-center py-10 text-lg text-gray-400">Please sign in to view your listings.</div>;
   }
   if (loading) {
-    return <div className="text-center py-10 text-lg text-gray-600">Loading your listings...</div>;
+    return <div className="text-center py-10 text-lg text-gray-500">Loading your listings...</div>;
   }
   if (!myListings.length) {
-    return <div className="text-center py-10 text-lg text-gray-600">You have not listed any properties yet.</div>;
+    return <div className="text-center py-10 text-lg text-gray-400">You have not listed any properties yet.</div>;
   }
   return (
     <div className="max-w-6xl mx-auto py-10">
-      <h2 className="text-3xl font-bold mb-6 text-blue-900 text-center">My Listings</h2>
+      <GradientText className="text-center text-5xl font-bold mb-17">My Listings</GradientText>
       <Listing listing={myListings} />
     </div>
   );
