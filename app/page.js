@@ -3,7 +3,8 @@ import Image from "next/image";
 import { Home, ShieldCheck, Sparkles, Globe, ArrowRight, Users, Facebook, Twitter, Instagram } from "lucide-react";
 import ExplorePropertyCard from "@/components/ui/ExplorePropertyCard";
 import GradientText from "@/react-bits/GradientText/GradientText";
-import {Avatar, AvatarGroup} from "@heroui/react";
+import { Avatar, AvatarGroup } from "@heroui/react";
+import TeamSection from "@/components/TeamSection";
 
 export default function LandingPage() {
   return (
@@ -95,6 +96,10 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+
+      {/* Team Profile Section */}
+      <TeamSection />
+
 
       {/* Footer Section */}
       <footer className="bg-gradient-to-r from-purple-800 to-black text-white">
